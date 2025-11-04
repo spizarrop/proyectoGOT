@@ -31,11 +31,16 @@ export class Casa {
     agregarMiembro(personaje) {
         if(personaje instanceof Personaje){
             this.#miembros.push(personaje);
+            console.log(`${personaje.getNombre} ha sido añadida a la ${this.#nombre}`);
+            personaje.setCasa = this;
         }
     }
 
     listarMiembros() {
-        return console.log(this.#miembros);
+        console.log(`Miembros de la ${this.#nombre}`);
+        this.#miembros.forEach(miembro => {
+            console.log(`- ${miembro.getNombre}`);
+        });
     }
 
 }

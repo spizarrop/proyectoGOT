@@ -1,16 +1,18 @@
+import { Casa } from "./casa.js";
+import { Arma } from "./arma.js";
 export class Personaje {
     #nombre;
     #edad;
     #vivo;
-    #casa; /* se puede omitir y ver si esta en los miembros de una casa */
+    #casa;
     #arma;
 
     constructor(nombre = "", edad = null, vivo = true) {
         this.#nombre = nombre;
         this.#edad = edad;
         this.#vivo = vivo;
-        this.#casa = [];
-        this.#arma = [];
+        this.#casa = new Casa;
+        this.#arma = new Arma;
     }
 
     get getNombre() {
@@ -42,7 +44,9 @@ export class Personaje {
     }
 
     set setCasa(casa) {
-        this.#casa = casa;
+        if (casa instanceof Casa) {
+            this.#casa = casa;
+        }
     }
 
     get getArma() {
@@ -50,11 +54,13 @@ export class Personaje {
     }
 
     set setArma(arma) {
-        this.#arma = arma;
+        if (arma instanceof Arma) {
+            this.#arma = arma;
+        }
     }
 
     presentarse() {
-        console.log(`Soy ${this.#nombre} de la casa ${this.#casa}`);
+        console.log(`Soy ${this.#nombre} de la casa ${this.#casa.getNombre}`);
     }
 
     morir() {

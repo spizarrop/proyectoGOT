@@ -35,7 +35,7 @@ export class Arma {
     }
     
     descripcion(){
-        console.log(`Caractreristicas del arma '${this.#nombre}':\nDaño:${this.#damage}\nTipo:${this.#tipo} `);
+        console.log(`Arma '${this.#nombre}'\nDaño: ${this.#damage}\nTipo: ${this.#tipo} `);
     }
 
 }

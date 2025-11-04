@@ -1,4 +1,5 @@
 import { Casa } from "./casa.js";
+import { Personaje } from "./personaje.js";
 
 export class Reino {
 
@@ -9,7 +10,7 @@ export class Reino {
     constructor(nombre = "") {
         this.#nombre = nombre;
         this.#casas = [];
-        this.#rey = [];
+        this.#rey = new Personaje;
     }
 
     get getNombre() {
@@ -25,22 +26,28 @@ export class Reino {
     }
 
     set setRey(rey) {
-        this.#rey = rey;
+        if (rey instanceof Personaje) {
+            this.#rey = rey;
+            console.log(`${rey.getNombre} ha sido proclamado rey del ${this.#nombre}`);
+        }
     }
 
     agregarCasa(casa) {
-        if(casa instanceof Casa){
+        if (casa instanceof Casa) {
             this.#casas.push(casa);
-            console.log(`La ${casa.getNombre} ha sido añadida al ${this.#nombre}.`);
+            console.log(`La ${casa.getNombre} ha sido añadido/a a la ${this.#nombre}.`);
         }
     }
 
     listarCasas() {
-        return this.#casas;
+        console.log(`Casas del ${this.#nombre}`);
+        this.#casas.forEach(casa => {
+            console.log(`- ${casa.getNombre}`);
+        });
     }
 
     mostrarRey() {
-        return this.#rey;
+        console.log(`El rey actual del ${this.#nombre} es ${this.#rey.getNombre} de la ${this.#rey.getCasa.getNombre}`);
     }
 
 }
