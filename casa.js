@@ -31,7 +31,7 @@ export class Casa {
     agregarMiembro(personaje) {
         if(personaje instanceof Personaje){
             this.#miembros.push(personaje);
-            console.log(`${personaje.getNombre} ha sido añadida a la ${this.#nombre}`);
+            console.log(`${personaje.getNombre} ha sido añadido/a a la ${this.#nombre}`);
             personaje.setCasa = this;
         }
     }

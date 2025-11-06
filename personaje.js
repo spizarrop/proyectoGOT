@@ -1,18 +1,19 @@
 import { Casa } from "./casa.js";
-import { Arma } from "./arma.js";
+//import { Arma } from "./arma.js";
+
 export class Personaje {
     #nombre;
     #edad;
     #vivo;
     #casa;
-    #arma;
+    //#arma
 
-    constructor(nombre = "", edad = null, vivo = true) {
+    constructor(nombre = "", edad = null) {
         this.#nombre = nombre;
         this.#edad = edad;
-        this.#vivo = vivo;
+        this.#vivo = true;
         this.#casa = new Casa;
-        this.#arma = new Arma;
+        //this.#arma = new Arma;
     }
 
     get getNombre() {
@@ -49,7 +50,7 @@ export class Personaje {
         }
     }
 
-    get getArma() {
+    /* get getArma() {
         return this.#arma;
     }
 
@@ -57,7 +58,7 @@ export class Personaje {
         if (arma instanceof Arma) {
             this.#arma = arma;
         }
-    }
+    } */
 
     presentarse() {
         console.log(`Soy ${this.#nombre} de la casa ${this.#casa.getNombre}`);
