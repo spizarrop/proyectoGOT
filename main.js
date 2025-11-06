@@ -78,3 +78,5 @@ tyrionLannister.aconsejar(reinoPoniente.getRey);
 robertBaratheon.presentarse();
 robertBaratheon.gobernar(); 
 robertBaratheon.luchar();
+
+// ------ FASE 3 -------

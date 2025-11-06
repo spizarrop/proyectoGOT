@@ -28,4 +28,12 @@ export class Guerrero extends Personaje {
         console.log(`${this.getNombre} entrena sin descanso para la próxima batalla.`);
     }
 
+    recibirDamage(puntos){
+        this.getVida; //añadir vida a la clase personaje
+    }
+
+    atacar(objetivo){
+
+    }
+
 }
