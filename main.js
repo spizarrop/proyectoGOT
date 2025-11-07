@@ -24,8 +24,8 @@ const tyrionLannister = new Consejero('Tyrion Lannister',32);
 const robertBaratheon = new Rey('Robert Baratheon',32,15);
 
 // Armas
-const garra = new Arma('Garra',5,'Cuerpo a cuerpo');
-const aguja = new Arma('Aguja',3,'Cuerpo a cuerpo');
+const garra = new Arma('Garra',25,'Cuerpo a cuerpo');
+const aguja = new Arma('Aguja',30,'Cuerpo a cuerpo');
 
 reinoPoniente.agregarCasa(casaStark);
 reinoPoniente.agregarCasa(casaLanister);
