@@ -33,8 +33,8 @@ export class Arma {
     set setTipo(tipo) {
         this.#tipo = tipo;
     }
-    
-    descripcion(){
+
+    descripcion() {
         console.log(`Arma '${this.#nombre}'\nDaño: ${this.#damage}\nTipo: ${this.#tipo} `);
     }
 

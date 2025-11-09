@@ -8,11 +8,11 @@ export class Personaje {
     #casa;
     //#arma
 
-    constructor(nombre = "", edad = null) {
+    constructor(nombre = "", edad = null, vivo = true, casa = null) {
         this.#nombre = nombre;
         this.#edad = edad;
-        this.#vivo = true;
-        this.#casa = new Casa;
+        this.#vivo = vivo;
+        this.#casa = casa instanceof Casa ? casa : new Casa();
         //this.#arma = new Arma;
     }
 

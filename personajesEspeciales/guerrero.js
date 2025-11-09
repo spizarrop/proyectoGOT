@@ -6,9 +6,9 @@ export class Guerrero extends Personaje {
     #arma;
     #vida;
 
-    constructor(nombre, edad) {
-        super(nombre, edad);
-        this.#arma = new Arma;
+    constructor(nombre = "", edad = null, vivo = true, casa = null, arma = null) {
+        super(nombre, edad, vivo, casa);
+        this.#arma = arma instanceof Arma ? arma : new Arma();
         this.#vida = 100;
     }
 
@@ -54,7 +54,7 @@ export class Guerrero extends Personaje {
         }
     }
 
-    morir(){
+    morir() {
         this.setVivo = false;
         console.log(`${this.getNombre} ha muerto.`);
     }
