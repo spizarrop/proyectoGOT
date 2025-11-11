@@ -32,6 +32,16 @@ export class Reino {
         }
     }
 
+    get getCasas(){
+        return this.#casas;
+    }
+
+    set setCasas(casas){
+        if(casas instanceof Array){
+            this.#casas = casas;
+        }
+    }
+
     agregarCasa(casa) {
         if (casa instanceof Casa) {
             this.#casas.push(casa);
